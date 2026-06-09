@@ -1,0 +1,6 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Google\Chrome]
+"HardwareAccelerationModeEnabled"=dword:00000000
+"HighEfficiencyModeEnabled"=dword:00000001
+"ProcessPerSite"=dword:00000001
