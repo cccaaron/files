@@ -5,9 +5,12 @@ set tmp_fold=tempdw-%random%
 md %tmp_fold%
 cd %tmp_fold%
 :dw
-curl -LkO cccaaron.github.io/files/SQL22/data/part%x:~1%
+start/b curl -LkO cccaaron.github.io/files/SQL22/data/part%x:~1%
 set/a x+=1
 if %x% leq 146 goto dw
+:wait
+timeout 3 >nul
+tasklist|find/i "curl"&&goto wait
 copy/b part* ..\SW_DVD9_NTRL_SQL_Svr_Standard_Edtn_2022_64Bit_English_OEM_VL_X23-28393.ISO
 cd ..
 rd/s /q %tmp_fold%
