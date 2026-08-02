@@ -11,7 +11,7 @@ if %x% leq 146 goto dw
 timeout 45 >nul
 :wait
 timeout 3 >nul
->nul tasklist|find/i "curl"&&goto wait
+tasklist|find/i "curl" >nul&&goto wait
 copy/b part* ..\SW_DVD9_NTRL_SQL_Svr_Standard_Edtn_2022_64Bit_English_OEM_VL_X23-28393.ISO
 cd ..
 rd/s /q %tmp_fold%
